@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bajadena Resistance</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      color: white;
+      position: relative;
+      overflow: hidden;
+      background: black;
+    }
+
+    /* Background Image */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("https://cdn.discordapp.com/attachments/1348432857600622685/1419142613768077444/Screenshot_2025-09-21_040431.png?ex=68d0af0d&is=68cf5d8d&hm=a65d5e8caccc6c4ff71f8c8fa60a07d6e9da9870c6b9be5220f5e7d2b5c1a993&") no-repeat center center / cover;
+      filter: blur(6px) brightness(0.6);
+      z-index: -1;
+    }
+
+    /* INFO button */
+    .info-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(0,0,0,0.7);
+      border: 2px solid white;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 10;
+    }
+
+    .info-btn:hover {
+      background: white;
+      color: black;
+    }
+
+    /* Overlay */
+    .overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 20;
+    }
+
+    /* Popup */
+    .popup {
+      background: rgba(0,0,0,0.85);
+      border: 2px solid white;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 800px;
+      width: 90%;
+      max-height: 80%;
+      overflow-y: auto;
+      text-align: left;
+      position: relative;
+    }
+
+    .popup p {
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .popup img {
+      display: block;
+      margin: 20px auto 0 auto;
+      max-width: 300px;
+      height: auto;
+    }
+
+    /* Video Container */
+    .video-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 85%;
+      max-width: 1000px;
+      text-align: center;
+      z-index: 5;
+    }
+
+    /* Video Captions */
+    .video-caption, .video-caption-bottom {
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      margin-bottom: 15px;
+    }
+
+    .video-caption-bottom {
+      margin-top: 15px;
+    }
+
+    /* Video Embed */
+    .video-container iframe {
+      width: 100%;
+      height: 550px;
+      border: none;
+      border-radius: 20px;
+    }
+
+    /* Bottom-right corner text */
+    .corner-text {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+      z-index: 15;
+    }
+  </style>
+</head>
+<body>
+  <!-- INFO button -->
+  <button class="info-btn" id="infoBtn">INFO</button>
+
+  <!-- Overlay + Popup -->
+  <div class="overlay" id="overlay">
+    <div class="popup" id="popup">
+      <p>
+        Bajadena has seized control of Arway and torn our city apart. They marched in, dragged people from their homes and forced them to live under a rule built on fear. Families were split, markets fell silent and the streets that once buzzed with life now echo with the footsteps of soldiers. We cannot sit by while our friends and neighbors are taken and our city is reshaped to fit their will. This is not just about territory. This is about people, memories and the right to live free in Arway.
+      </p>
+      <p>
+        We must stand up together, gather our strength and take back what is ours. Organize quietly, support each other and keep watch for those in need. Help the families who were uprooted. Share information when it is safe to do so. Train, plan and move with purpose. Every small act of resistance chips away at the control they impose. When we act together we become more than individuals. We become the force that will reclaim our streets and restore the life that Bajadena tried to steal.
+      </p>
+      <p>
+        Our goal is clear. Remove Bajadena from our city and make sure they can no longer threaten Arwayians. Free those who were taken and rebuild the neighborhoods they broke. Reopen the shops, bring back the festivals and fill the squares with laughter again. Let our actions be guided by courage and compassion so that when the dust settles we can rebuild Arway as a place where everyone is safe and welcome. This is our home and we will not let it remain under their shadow.
+      </p>
+      <img src="https://media.discordapp.net/attachments/1348432857600622685/1419145288706297898/image.png?ex=68d0b18b&is=68cf600b&hm=9943d97a3873e419ae99a0f2469277416dfd42cf0f859e214b69773a5a7592cc&=&format=webp&quality=lossless&width=550&height=256" alt="Resistance Emblem">
+    </div>
+  </div>
+
+  <!-- Video Container -->
+  <div class="video-container">
+    <div class="video-caption">
+      This is what the Bajadena government does to Arwaynian citizens: seizing property, militarizing neighborhoods, and imposing fear.
+    </div>
+    <iframe src="https://streamable.com/e/uter4w" allowfullscreen></iframe>
+    <div class="video-caption-bottom">
+      To join the rebels, you must be prepared: a weapon for defense, protective armor, and medical supplies to survive and fight.
+    </div>
+  </div>
+
+  <!-- Bottom-right corner text -->
+  <div class="corner-text">
+    This website will be updated if the owner has time.
+  </div>
+
+  <!-- SoundCloud Embed (hidden) -->
+  <iframe 
+    width="0" 
+    height="0" 
+    scrolling="no" 
+    frameborder="no" 
+    allow="autoplay"
+    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/n0ahjb/f-song-instrumental-strawberry&auto_play=true&loop=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false">
+  </iframe>
+
+  <script>
+    const infoBtn = document.getElementById('infoBtn');
+    const overlay = document.getElementById('overlay');
+    const popup = document.getElementById('popup');
+
+    infoBtn.addEventListener('click', () => {
+      overlay.style.display = 'flex';
+    });
+
+    overlay.addEventListener('click', (e) => {
+      if (!popup.contains(e.target)) {
+        overlay.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
