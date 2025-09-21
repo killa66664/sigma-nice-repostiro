@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bajadena Resistance</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: white;
+      background: #111;
+      height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Background */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("https://cdn.discordapp.com/attachments/1348432857600622685/1419142613768077444/Screenshot_2025-09-21_040431.png?ex=68d157cd&is=68d0064d&hm=0ff74c448655f871db76d4ca2e2205c8430303aa814287f79b04697fe161193c") no-repeat center center / cover;
+      filter: blur(6px) brightness(0.6);
+      z-index: -1;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 60px 20px 20px 20px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    /* Video Section */
+    .video-section {
+      max-width: 900px;
+      margin: 40px auto;
+      text-align: center;
+    }
+
+    .video-caption-top {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+
+    .video-frame {
+      width: 100%;
+      height: 500px;
+      border: 2px solid white;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .video-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* Glassy Button */
+    .button-bar {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .btn {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      color: white;
+      padding: 12px 28px;
+      border-radius: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: rgba(255, 255, 255, 0.3);
+      color: black;
+    }
+
+    /* Overlay */
+    .overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      justify-content: center;
+      align-items: center;
+      z-index: 20;
+    }
+
+    /* Popup */
+    .popup {
+      background: rgba(0,0,0,0.85);
+      border: 2px solid white;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 800px;
+      width: 90%;
+      max-height: 80%;
+      overflow-y: auto;
+      text-align: left;
+      line-height: 1.6;
+    }
+
+    .popup img {
+      display: block;
+      margin: 20px auto;
+      max-width: 250px;
+      height: auto;
+    }
+
+    /* Footer Corner */
+    .footer-note {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      font-size: 14px;
+      opacity: 0.9;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 6px 10px;
+      border-radius: 8px;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Bajadena Resistance</h1>
+    <p>Standing together against fear and oppression in Arway.</p>
+  </div>
+
+  <!-- Video Section -->
+  <div class="video-section">
+    <div class="video-caption-top">
+      This is what the Bajadena government does to Arwaynian citizens: seizing property, militarizing neighborhoods, and imposing fear.
+    </div>
+    <div class="video-frame">
+      <iframe src="https://streamable.com/e/uter4w" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Button -->
+  <div class="button-bar">
+    <button class="btn" id="infoBtn">Learn More</button>
+  </div>
+
+  <!-- Info Overlay -->
+  <div class="overlay" id="overlay-info">
+    <div class="popup">
+      <p>
+       Bajadena’s forces crossed into Arway and tore our city apart. They marched in, dragged people from their homes and forced them to live under a rule built on fear. Families were split, markets fell silent and the streets that once buzzed with life now echo with the footsteps of occupying soldiers. This is not just about land. This is about people, memories and the right to live free in Arway.
+
+Clans across the region answered the call. From small crews to long-standing houses, clanners stepped forward to protect neighborhoods and rescue those taken. Clan leaders organized safe routes, set watch shifts and ran supply lines. Scouts moved quietly to gather information. Builders and medics opened safe houses for families and fighters. Everyone did their part to keep people safe and to hold our community together.
+
+When clans met Bajadena’s forces they fought with purpose and discipline. They trained together, shared tactics and covered each other’s backs. Old rivalries were put aside because Arway was bigger than any single group. New alliances formed in the squares and on the streets. Together clanners reclaimed checkpoints, freed captured citizens and reopened markets. Each rescue brought hope and strengthened our resolve.
+
+We also fought smart. Plans were made, signals agreed and help sent where it was needed most. Clanners kept lines of communication open, supported local families and taught civilians how to stay safe. Artists, cooks and traders pitched in. The city came alive again not only because of battles won but because people returned to rebuild their lives.
+
+Our goal is simple: push Bajadena’s occupying forces back, free everyone who was taken, and restore Arway. When the dust settles we will rebuild our streets, reopen festivals and bring laughter back to the squares. Clans will be remembered not only for the fights they joined but for the lives they saved and the care they showed afterward. This is our home and we will stand together until Arway is free.
+      </p>
+      <img src="https://media.discordapp.net/attachments/1348432857600622685/1419145288706297898/image.png?ex=68d15a4b&is=68d008cb&hm=40c43f1437d40f102e4853bdd3e2da4e6b399404a996326c25327655a569f723&=&format=webp&quality=lossless&width=2512&height=1167" alt="Resistance Emblem">
+    </div>
+  </div>
+
+  <!-- Footer Note -->
+  <div class="footer-note">
+    ⚠️ DISCLAIMER: This website is <strong>NOT</strong> related to terrorism. It is created solely for the Roblox game <strong>Anomic</strong>.<br>
+    The website will continue to be updated whenever the creator has time (btw the music is bugged dont mind that).
+  </div>
+
+  <script>
+    const infoBtn = document.getElementById('infoBtn');
+    const overlayInfo = document.getElementById('overlay-info');
+
+    // Learn More popup
+    infoBtn.addEventListener('click', () => {
+      overlayInfo.style.display = 'flex';
+    });
+
+    overlayInfo.addEventListener('click', (e) => {
+      if (!e.target.closest('.popup')) {
+        overlayInfo.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
